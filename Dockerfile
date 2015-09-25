@@ -13,5 +13,5 @@ RUN apt-get install -y \
 USER go
 RUN go get github.com/mitchellh/gox
 USER root
-cp /home/go/bin/gox /usr/local/bin
+RUN cp /home/go/bin/gox /usr/local/bin
 USER go
