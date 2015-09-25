@@ -1,6 +1,8 @@
 FROM fstab/go:latest
 MAINTAINER Fabian Stäber, fabian@fstab.de
 
+ENV LAST_UPDATE=2015-09-25
+
 USER root
 RUN apt-get update && \
     apt-get upgrade -y
@@ -10,7 +12,3 @@ RUN apt-get install -y \
 
 USER go
 RUN go get github.com/mitchellh/gox
-USER root
-RUN gox -build-toolchain
-RUN cp /home/go/bin/gox /usr/local/bin
-USER go
