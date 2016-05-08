@@ -1,7 +1,7 @@
-FROM golang:1.6-wheezy
+FROM golang:1.6.2-wheezy
 MAINTAINER Fabian Stäber, fabian@fstab.de
 
-ENV LAST_UPDATE=2016-03-11
+ENV LAST_UPDATE=2016-05-08
 
 RUN apt-get update && \
     apt-get upgrade -y
